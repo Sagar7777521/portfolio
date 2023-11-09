@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -33,7 +33,7 @@ header nav {
   align-items: center;
   position: fixed;
   width: 90%;
-  z-index: 99;
+  z-index: 1;
 }
 
 header nav img {
@@ -117,12 +117,12 @@ header nav .search i {
   color: #fbfbfb;
   font-weight: 400;
   font-size: 32px;
-  margin-left: 10vw;
+  margin-left: 5vw;
 }
 
 .landing .intro h3 span {
   color: #fec86a;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 3.5rem;
 }
 
@@ -173,7 +173,7 @@ header nav .search i {
   font-size: 56px;
   font-weight: 700;
   color: #fbfbfb;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .about .description {
@@ -182,8 +182,8 @@ header nav .search i {
 }
 
 .about .description .line {
-  height: 2.5px;
-  width: 400px;
+  height: 3px;
+  width: 500px;
   background-color: #fec86a;
   margin-right: 32px;
 }
@@ -209,7 +209,7 @@ header nav .search i {
   font-size: 56px;
   font-weight: 700;
   color: #fbfbfb;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .cards {
@@ -223,6 +223,7 @@ header nav .search i {
 }
 
 .skill-card {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   height: 20vw;
   width: 20vw;
   background-color: #3d3e42;
@@ -237,6 +238,7 @@ header nav .search i {
 }
 
 .skill-card:hover {
+  transform: rotate(7deg);
   background-color: #fec86a;
 }
 
@@ -264,7 +266,7 @@ header nav .search i {
   font-size: 56px;
   font-weight: 700;
   color: #fbfbfb;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .portfolio-cards {
@@ -354,7 +356,7 @@ header nav .search i {
 }
 
 .portfolio button:hover {
-  background-color: #cc9e4e;
+  background-color: #b8904b;
 }
 
 .experience {
@@ -370,14 +372,14 @@ header nav .search i {
 .darker-div {
   background-color: #34353a;
   width: 100vw;
-  height: 10vh;
+  height: 3vh;
 }
 
 .experience h1 {
   position: absolute;
   color: #fbfbfb;
   font-size: 56px;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Kumbh Sans", sans-serif;
   transform: translate(-50%, -50%);
   top: 10%;
   left: 15%;
@@ -386,11 +388,11 @@ header nav .search i {
 .lighter-div {
   background-color: #3d3e42;
   width: 100vw;
-  /* height: 90vh; */
+  height: 90vh;
   padding: 10vh;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px;
 }
 
 .lighter-div .exp {
@@ -437,10 +439,17 @@ header nav .search i {
   margin: 10px 0;
 }
 
+.exp-desc h4 {
+  color: #fec86a;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
 .exp-desc p {
   color: #fbfbfb;
   font-size: 16;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .contact-me {
@@ -453,22 +462,71 @@ header nav .search i {
 }
 
 .contact-me h1 {
-  font-size: 56px;
+  font-size: 50px;
   color: #fbfbfb;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 600;
 }
 
 .contact {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 
 .contact-card {
+  align-items: center;
   background-color: #fec86a;
-  padding: 10px;
   border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
   display: flex;
-  gap: 10px;
-  margin-top: 7.5vh;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.contact-card:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.contact-card:hover:after {
+  transform: translate(0, 0);
+}
+
+.contact-card:active {
+  background-color: #fec86a;
+  transform: translate(0, 0);
+  outline: 0;
+}
+
+.contact-card:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .contact-card {
+    padding: 0 40px;
+  }
 }
