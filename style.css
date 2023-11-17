@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
+body {
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #fec86a;
+  --sb-size: 5px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
 * {
   padding: 0;
   margin: 0;
@@ -28,15 +50,24 @@ header {
 }
 
 header nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  background-color: #fec86a;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.09);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: auto;
+  justify-content: space-between;
+  left: 0;
+  padding: 25px 40px 25px 50px;
   position: fixed;
-  width: 90%;
-  z-index: 1;
+  top: 0;
+  width: 100%;
+  z-index: 200;
 }
 
 header nav img {
+  position: fixed;
   height: 56px;
   width: 56px;
   object-fit: contain;
@@ -54,17 +85,17 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #98999a;
+  color: #000000;
   text-decoration: none;
   transition: all ease 0.5s;
 }
 
 header nav ul li a:hover {
-  color: #fbfbfb;
+  color: #000000;
 }
 
 header nav ul li .active {
-  color: #fbfbfb;
+  color: #000000;
 }
 
 header nav .search {
@@ -102,7 +133,7 @@ header nav .search i {
 
 .landing {
   display: flex;
-  height: 90vh;
+  height: 100vh;
   background-color: transparent;
   align-items: center;
   justify-content: space-between;
@@ -184,17 +215,27 @@ header nav .search i {
 .about .description .line {
   height: 3px;
   width: 500px;
+  left: 40%;
   background-color: #fec86a;
   margin-right: 32px;
 }
 
 .about .description p {
-  color: #fbfbfb;
-  font-size: 20px;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 25px;
+  margin-left: 25px;
 }
 
 .about .description p span {
   color: #fec86a;
+}
+.intro img {
+  height: 5rem;
+  position: absolute;
+  left: 36rem;
+  top: 24rem;
+  width: 5rem;
 }
 
 .skills {
